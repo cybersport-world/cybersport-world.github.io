@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 @import url('https://fonts.googleapis.com/css?family=Ranga');
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 
 body{
     background-color: #323232;
@@ -29,7 +28,8 @@ li a {
     display: block;
     color: #fff;
     padding: 27px 12px;
-    text-decoration: none; 
+    text-decoration: none;
+    
 }
 
 li a.active {
@@ -53,12 +53,10 @@ img.list{
     text-shadow: 20px 20px 40px black, 0 0 5px gold;
 }
 
-
 img.log{
   width: 60px;
-  height: 60px; 
+  height: 60px;  
 }
-
 /*----------------------------------------*/
 .main{
     background-color: #ffffff;
@@ -119,8 +117,9 @@ img.cls1{
 /*----------------------------------------*/
 div.obj_tm{
     display: inline;
-    width:300px;
-    height:300px;
+    width:3000px;
+    height:3000px;
+    border-radius: 2px;
     opacity: 0.75;
     transition: all 0.5s ease;
 }
@@ -128,7 +127,6 @@ div.obj_tm:hover{
     opacity: 1;
     transition: all 0.5s ease;
 }
-
 
 img.img_tm{
     width: 240px;
@@ -252,7 +250,6 @@ div.abt{
 
 fieldset{
     width: 300px;
-    
     border-radius: 5px;
 }
 
@@ -282,16 +279,7 @@ transition: all 0.3s ease;
 div.gal{
 display: inline;
 width: 500px;
+
 }
-
-
-
-
-hr.line{
-width: 25%;
-color:green;
-}
-
-
 
 

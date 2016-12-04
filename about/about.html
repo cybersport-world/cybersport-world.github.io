@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../styles/style.css">
-	<title>Information</title>
+<link rel="stylesheet" type="text/css" href="../styles/style2.css">
+<link rel='shortcut icon' href='../foto/menu_logo/favicon.ico' type='image/x-icon'>
+  <title>Information</title>
 </head>
-<body>
+
+<style>
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+
+<body onload="myFunction()">
+<div id="snackbar">Page: "INFORMATION"</div>
 
 <div>
-	<ul>
+  <ul>
+   <li><img align="center" class="log" src="../foto/menu_logo/logo.png"></li>
   <li><a title="Home" href="../index.html"><img align="center" class="list" src="../foto/menu_logo/home.png"></a></li>
   <li><a title="Team's" href="../teams/teams.html"><img align="center" class="list" src="../foto/menu_logo/team.png"></li></a>
   <li><a title="Game's" href="../games/games.html"><img align="center" class="list" src="../foto/menu_logo/games.png"></a></li>
@@ -21,9 +69,9 @@
 <center>
 <div style="margin-left: 60px">
    <div class="main">
-   		<div class="content" align="center" style="align-content: left">
-   			<div align="left">
-   			  
+      <div class="content" align="center" style="align-content: left">
+        <div align="left">
+          
         <div class="abt">
         <fieldset>
           <legend>Read</legend>
@@ -51,7 +99,7 @@
 
 
 
-   		</div>
+      </div>
    </div>
    </div>
 </center> 
@@ -59,4 +107,13 @@
 <a href="#top" class="top" title="Top on page"><img class="img_top" src="../foto/menu_logo/up.png"></a></div>
 
 </body>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
 </html>

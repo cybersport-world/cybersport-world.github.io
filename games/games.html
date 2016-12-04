@@ -2,12 +2,59 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel='shortcut icon' href='../foto/menu_logo/favicon.ico' type='image/x-icon'>
  <title>Games</title>
-</head>
-<body>
 
+<style>
+#snackbar {
+		visibility: hidden;
+		min-width: 250px;
+		margin-left: -125px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		border-radius: 2px;
+		padding: 16px;
+		position: fixed;
+		z-index: 1;
+		left: 50%;
+		bottom: 30px;
+		font-size: 17px;
+}
+
+#snackbar.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+		from {bottom: 0; opacity: 0;} 
+		to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+		from {bottom: 0; opacity: 0;}
+		to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+		from {bottom: 30px; opacity: 1;} 
+		to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+		from {bottom: 30px; opacity: 1;}
+		to {bottom: 0; opacity: 0;}
+}
+</style>
+ 
+</head>
+<body onload="myFunction()">
+<div id="snackbar">Page: "GAME's"</div>
 <div>
  <ul>
+  <li><img align="center" class="log" src="../foto/menu_logo/logo.png"></li>
  <li><a title="Home" href="../index.html"><img align="center" class="list" src="../foto/menu_logo/home.png"></a></li>
  <li><a title="Team's" href="../teams/teams.html"><img align="center" class="list" src="../foto/menu_logo/team.png"></li></a>
  <li><a title="Game's" class="active" href=""><img align="center" class="list" src="../foto/menu_logo/games.png"></a></li>
@@ -20,39 +67,48 @@
 <div class="fnt" align="center"><header><font color="WHITE" size="7">Game's in eSport</font></header></div><br>
 <center>
 <div style="margin-left: 60px">
-  <div class="main">
-   <div class="content" align="center" style="align-content: left">
-    <div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://wiki.teamliquid.net/dota2/Main_Page"><img class="gms" src="../foto/games/dota.png" title="Dota2" alt="DOta2" width="250" height="250"></a>
+	<div class="main">
+	 <div class="content" align="center" style="align-content: left">
+		<div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://wiki.teamliquid.net/dota2/Main_Page"><img class="gms" src="../foto/games/dota.png" title="Dota2" alt="DOta2" width="250" height="250"></a>
 
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://wiki.teamliquid.net/counterstrike/Main_Page"><img class="gms" src="../foto/games/csgo.png" title="Counter Strike: Global Offensive" alt="csgo" width="300" height="300"></a>
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://wiki.teamliquid.net/hearthstone/Main_Page"><img class="gms" src="../foto/games/hs.png" title="Heart Stone" alt="heartstone"></a>
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://wiki.teamliquid.net/starcraft2/Main_Page"><img class="gms" src="../foto/games/sc2.png" title="StarCraft2" alt="starcraft2"></a>
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="https://en.wikipedia.org/wiki/League_of_Legends"><img class="gms" src="../foto/games/lol.png" title="League of Legends" alt="leagueoflegends"></a>
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://www.teamliquid.net/forum/games/141209-world-of-tanks"><img class="gms" src="../foto/games/wot.png" title="World of Tanks" alt="wot"></a>
-     </div>
-     <div class="obj_tm">
-                  <a target="_blank" href="http://wiki.teamliquid.net/heroes/Main_Page"><img class="gms" src="../foto/games/hots.png" title="Heroes of the Storm" alt="hots"></a>
-     </div>
-    
-    </div>
-   </div>
-  </div>
-  </div>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://wiki.teamliquid.net/counterstrike/Main_Page"><img class="gms" src="../foto/games/csgo.png" title="Counter Strike: Global Offensive" alt="csgo" width="300" height="300"></a>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://wiki.teamliquid.net/hearthstone/Main_Page"><img class="gms" src="../foto/games/hs.png" title="Heart Stone" alt="heartstone"></a>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://wiki.teamliquid.net/starcraft2/Main_Page"><img class="gms" src="../foto/games/sc2.png" title="StarCraft2" alt="starcraft2"></a>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="https://en.wikipedia.org/wiki/League_of_Legends"><img class="gms" src="../foto/games/lol.png" title="League of Legends" alt="leagueoflegends"></a>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://www.teamliquid.net/forum/games/141209-world-of-tanks"><img class="gms" src="../foto/games/wot.png" title="World of Tanks" alt="wot"></a>
+		 </div>
+		 <div class="obj_tm">
+									<a target="_blank" href="http://wiki.teamliquid.net/heroes/Main_Page"><img class="gms" src="../foto/games/hots.png" title="Heroes of the Storm" alt="hots"></a>
+		 </div>
+		
+		</div>
+	 </div>
+	</div>
+	</div>
 </center> 
 
 <a href="#top" class="top" title="Top on page"><img class="img_top" src="../foto/menu_logo/up.png"></a></div>
 
 </body>
+
+<script>
+function myFunction() {
+		var x = document.getElementById("snackbar")
+		x.className = "show";
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
 </html>
